@@ -1,0 +1,42 @@
+[user]
+	name = robin.zhang
+	email = robin.zhang@zongmutech.com
+[merge]
+	tool = BeyondCompare4
+[diff]
+	guitool = beyondcompare4
+[core]
+	autocrlf = true
+[alias]
+	co = checkout
+	st = status
+	df = diff
+	ss = status -s
+	cm = commit -m
+	br = branch
+	bm = branch -m
+	bd = branch -D
+	cb = checkout -b
+	ll = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%s%Creset %Cgreen(%cd) <%an>%Creset' --abbrev-commit --date=iso
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(bold blue)%s%Creset %Cgreen(%cd) <%an>%Creset' --abbrev-commit --date=iso
+	alg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(bold blue)%s%Creset %Cgreen(%cd) <%an>%Creset' --abbrev-commit --date=iso --all
+	ls = log --stat
+	plo = pull origin
+	pho = push origin
+	showfile = show --name-only
+	pb = pull --rebase
+	rh = reset --hard
+	cp = cherry-pick
+[mergetool "BeyondCompare4"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+[difftool "beyondcompare4"]
+	path = C:/Program Files/Beyond Compare 4/bcomp.exe
+	cmd = \"C:/Program Files/Beyond Compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[gerrit]
+	name = robin.zhang
