@@ -1,0 +1,41 @@
+
+# found all csrc
+function cgrep
+{
+    find -name "*.c" | xargs grep --color -n $@
+}
+
+# found str in all header files
+function hgrep
+{
+    find -name -name "*.h" | xargs grep --color -n $@
+}
+
+# found str in all source files
+function sgrep
+{
+    find -name "*.c" -o -name "*.h" | xargs grep --color -n $@
+}
+
+# found str in all makefiles
+function mgrep
+{
+    find -name "*.mk" -o -iname "makefile" | xargs grep --color -n $@
+}
+
+# found str in all files
+function agrep
+{
+    find -type f -name "*" | xargs grep --color -n $@
+}
+
+# found file and list it's history
+function fhistory
+{
+    for list in $(find . -name $1)
+    do 
+        echo "file $list:"
+        git log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%s%Creset %Cgreen(%cd) <%an>%Creset' --abbrev-commit --date=iso $list
+        echo ""
+    done
+}
