@@ -12,12 +12,16 @@ function download_FlameGraph()
 }
 
 
-
+function download_gitgerrit()
+{
+    git clone git@github.com:deeperblue/git-gerrit.git
+}
 
 
 
 #### main ####
 download_FlameGraph
+download_gitgerrit
 
 
 
